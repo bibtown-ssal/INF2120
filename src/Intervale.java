@@ -8,10 +8,10 @@ import java.util.Iterator;
  * ex: Intervale(4,8) represente les valeurs 4,5,6,7,8
  */
 
-public class Intervale<T> implements Iterable<T> {
+public class Intervale implements Iterable<Integer> {
 
     protected int debut;
-    protected int fin
+    protected int fin;
 
     public Intervale(int debut, int fin){
         this.debut = debut;
@@ -21,12 +21,31 @@ public class Intervale<T> implements Iterable<T> {
     public boolean estDans(int x){
         return (x >= this.debut) && (x <= this.fin);
     }
-        
-    @Override
-    public Iterator<T> iterator() {
 
-        return null;
+    @Override
+    public Iterator iterator() {
+        return new IteratorIntervale(this);
+    }
+}
+
+class IteratorIntervale implements Iterator<Integer> {
+    private Intervale _it = null;
+    private int _courant = 0;
+
+    public IteratorIntervale(Intervale it){
+        this._it = it;
+        this._courant = it.debut;
     }
 
+    @Override
+    public Integer next(){
+        int resultat = this._courant;
+        this._courant++;
+        return resultat;
+    }
 
+    @Override
+    public  boolean hasNext(){
+        return this._courant <= this._it.fin;
+    }
 }

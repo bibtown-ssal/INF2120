@@ -24,6 +24,12 @@ public class cours4 {
             System.out.println(f);
         }
 
+        Intervale intervale = new Intervale(1,3);
+        for(Integer i : intervale){
+            System.out.println(i);
+        }
+
+
     }
 
 }

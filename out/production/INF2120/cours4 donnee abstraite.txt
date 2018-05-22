@@ -1,0 +1,9 @@
+Type de données abstraites (TDA)
+    ~abstract data type (ADT)
+
+
+    Description (semi) formelle d'un typre de données
+        description: -des services offerts par un type de donnée (méthodes offertes, en Java)
+                     -d'une structure de données
+            abstraite: indépendant du code.
+

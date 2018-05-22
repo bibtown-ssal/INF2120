@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="827465de-a5ae-4515-8a5e-016bfb3d6094" name="Default" comment="" />
+    <list default="true" id="827465de-a5ae-4515-8a5e-016bfb3d6094" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cours4 donnee abstraite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Intervale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Intervale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cours4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cours4.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +47,8 @@
       <file leaf-file-name="cours4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cours4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="155">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,15 +56,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Intervale.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Intervale.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Intervale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="245">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="e#495#496#0" expanded="true" />
                 <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cours4 donnee abstraite.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cours4 donnee abstraite.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -73,6 +91,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -94,7 +115,9 @@
         <option value="$PROJECT_DIR$/src/SontComparable.java" />
         <option value="$PROJECT_DIR$/src/Cours3.java" />
         <option value="$PROJECT_DIR$/src/cours4.java" />
+        <option value="$PROJECT_DIR$/src/IteratorIntervale.java" />
         <option value="$PROJECT_DIR$/src/Intervale.java" />
+        <option value="$PROJECT_DIR$/src/cours4 donnee abstraite.txt" />
       </list>
     </option>
   </component>
@@ -108,11 +131,11 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-118" />
-    <option name="y" value="77" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="720" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -137,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Cours3">
+  <component name="RunManager" selected="Application.cours4">
     <configuration name="Cours3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cours3" />
       <module name="INF2120" />
@@ -148,6 +171,10 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration name="cours4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cours4" />
+      <module name="INF2120" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -167,9 +194,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Cours3" />
+      <item itemvalue="Application.cours4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.cours4" />
         <item itemvalue="Application.Cours3" />
         <item itemvalue="Application.Main" />
       </list>
@@ -188,27 +217,27 @@
       <updated>1525784641837</updated>
       <workItem from="1525784653226" duration="9906000" />
       <workItem from="1526389469074" duration="9928000" />
-      <workItem from="1526994515626" duration="1661000" />
+      <workItem from="1526994515626" duration="5971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21495000" />
+    <option name="totallyTimeSpent" value="25805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="721" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32885906" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32911393" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -226,7 +255,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32928944" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,22 +492,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cours4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="155">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/IteratorIntervale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Intervale.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        <state relative-caret-position="245">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
             <element signature="e#495#496#0" expanded="true" />
             <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cours4 donnee abstraite.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
