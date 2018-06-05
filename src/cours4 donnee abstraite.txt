@@ -24,4 +24,60 @@ Liste : contenant (peut contenir des éléments) homogène (tous les éléments 
         souvent, on peut consulter la taille (et "estVide()")
 
 
+File (queue, FiFo)(liste spécialisé):  contenant, homogene et sequentiel
+        Ajout: a la fin
+        Suppression: au début
+
+    Services
+        Construction d'une file vide
+            -> taille = 0 [Soit F une file vide, alors F.taille == 0]
+        Taille{size} :: fonction qui prend une file et retourne un integer positif
+            (nombre d'éléments dans la file)
+        estVide {isEmpty}{Empty} :: prend file, retourne boolean (retourne vrai sssi taille = 0)
+
+        Enfiler{add}{insert}{push}{offer}: file x valeur -> file... [ajoute une valeur a la fin de la file]
+
+        Tete{peak}{head}: file -> valeur (retourne la personne a la tete de la file)
+                retourne le premier element
+        defiler{remove}{removeHead}{poll}: enleve le premier element de la file (et le retourne)
+
+            tete et defiler, sur file vide, msgErr, ou retourne null, ou lance exception
+
+
+    pile (stack, FiLo) contenant sequentiel homogene
+        sommet: dernier element empiler
+
+        Constructeur:
+                 construction d'une pile vide
+
+        estVide (vrai sssi pas d'élément dans la pile)
+
+        taille: retourne nb d'élément
+
+        empiler{push}: ajoute un élément a la pile (qui devient nouveau sommet)
+
+        sommet{top}: retourne le sommet
+
+        dépiler{pop}: enleve le sommet (et le retourne, souvent)
+
+            sommet et depiler, sur pile vide, msgErr, retourne null ou lance exception
+
+
+
+Type de données abstraite: Fonction
+    F: A -> B
+    F(x) = x+1
+      ^=> parametre (element de A)
+
+      (x+1) => corps de la fonction (element de B)
+
+      (A = domaine, B = codomaine, deux types de données)
+
+    pour info:
+        F = nom de la méthode
+        (x+1) = return (code)
+        (x) = parametre
+        A = type du parametre
+        B = type du return
+
 
