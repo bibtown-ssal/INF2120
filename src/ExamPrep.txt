@@ -1,0 +1,44 @@
+
+Référence;
+
+Héritage;
+    Portée (private, protected, public)
+    extends X
+
+    @Override
+    Réécriture ..
+
+    Static, Final, Abstract
+
+    Constructeur (super)
+
+Object
+    toString
+    equals (instanceOf)
+
+ArrayList (add, remove, get, set, size, isEmpty)
+
+Interface: contrat méthode
+    Implements
+    Iterator, Iterable, iterator(), hasNext(), next()
+    Comparable, compareTo()
+
+Type generique: methode, classe
+    (Pair)
+
+Type de données abstrait
+    définition
+    Liste
+
+    Pile
+
+    File
+
+    implementation de pile, file   (utilisant référence et type générique), liste chainee
+            héritage (this)
+
+            implementation Java (stack)
+
+
+Fonction
+    récursive
