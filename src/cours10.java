@@ -82,7 +82,7 @@ public class cours10 {
 
     public static <E extends Comparable<E>> void triQuickSort(E[] tab){
 
-    }
+    } 
 
     public static void main (String[] args){
         Integer[] t = {3,5,1,2,3};
