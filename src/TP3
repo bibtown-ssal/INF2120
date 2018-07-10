@@ -1,0 +1,27 @@
+|ajout|Dessin|                      PanneauImage    
+|insertion systeme|effacer systeme|     (.repaint)
+|""|""|
+|""|""|
+|""|""|
+|""|""|
+|""|""|
+|""|""|
+|""|""|
+
+
+
+
+
+
+
+
+Dialog (voir pour afficher mess. err)
+
+panneau image 600pt par 600pt min
+
+
+Classe "Flame" est la creatrice de l,interface
+peut modifier le code a volonté
+
+
+sur appuie sur "Dessin", utiliser classe IFS
