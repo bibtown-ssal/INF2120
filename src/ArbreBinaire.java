@@ -1,22 +1,24 @@
-public class ArbreBinaire <Clef extends Comparable<Clef>> {
-    protected class Noeud < Clef extends Comparable<Clef>>{
+public class ArbreBinaire <Clef extends Comparable<Clef>, Def> {
+    protected class Noeud < Clef extends Comparable<Clef>, Def>{
         protected Clef clef;
-        protected Noeud<Clef> gauche = null;
-        protected Noeud<Clef> droite = null;
+        public Def definition;
+        protected Noeud<Clef, Def> gauche = null;
+        protected Noeud<Clef, Def> droite = null;
 
-        public Noeud(Clef clef){
+        public Noeud(Clef clef, Def definition){
             this.clef = clef;
+            this.definition = definition;
         }
 
         public Clef getClef() {
             return clef;
         }
 
-        public Noeud<Clef> getGauche() {
+        public Noeud<Clef, Def> getGauche() {
             return gauche;
         }
 
-        public Noeud<Clef> getDroite() {
+        public Noeud<Clef, Def> getDroite() {
             return droite;
         }
 
@@ -24,16 +26,16 @@ public class ArbreBinaire <Clef extends Comparable<Clef>> {
             this.clef = clef;
         }
 
-        public void setGauche(Noeud<Clef> gauche) {
+        public void setGauche(Noeud<Clef, Def> gauche) {
             this.gauche = gauche;
         }
 
-        public void setDroite(Noeud<Clef> droite) {
+        public void setDroite(Noeud<Clef, Def> droite) {
             this.droite = droite;
         }
     }
 
-    Noeud<Clef> racine;
+    Noeud<Clef, Def> racine;
 
     public ArbreBinaire(){
         racine = null;
@@ -43,23 +45,23 @@ public class ArbreBinaire <Clef extends Comparable<Clef>> {
         return racine == null;
     }
 
-    public void inserer(Clef clef){
+    public void inserer(Clef clef, Def definition){
         //on insere toujours une nouvelle feuille.
         if(racine == null){
-            racine = new Noeud<>(clef);
+            racine = new Noeud<>(clef, definition);
         }else {
-            Noeud<Clef> courant = racine;
+            Noeud<Clef, Def> courant = racine;
             int resultatComparaison = courant.getClef().compareTo(clef);
 
             while (courant != null && resultatComparaison != 0) {
                 if (resultatComparaison < 0) {
                     if (null == courant.getGauche()) {
-                        courant.setGauche(new Noeud<>(clef));
+                        courant.setGauche(new Noeud<>(clef, definition));
                     }
                     courant = courant.getGauche();
                 } else {
                     if (null == courant.getDroite()) {
-                        courant.setDroite(new Noeud<>(clef));
+                        courant.setDroite(new Noeud<>(clef, definition));
                     }
                     courant = courant.getDroite();
                 }
@@ -97,11 +99,89 @@ public class ArbreBinaire <Clef extends Comparable<Clef>> {
             parentDeSuivant.setGauche(null)
          */
 
+        Noeud<Clef, Def> parent = null;
+        Noeud<Clef, Def> courant = this.racine;
+
+        int resultat = (null != courant) ? clef.compareTo(courant.clef) : 0;
+
+        /*
+            logique de recherche
+         */
+        while (null != courant && resultat != 0){
+            parent = courant;
+            if(resultat > 0){
+                courant = courant.getDroite();
+            }else {
+                courant = courant.getGauche();
+            }
+            resultat = (null != courant) ? clef.compareTo(courant.clef) : 0;
+        }
+
+        /*
+            Etat du programme:
+
+                Arbre vide              | Parent : null     | courant : null
+                Supprimer racine        | Parent : null     | courant != null
+                non present             | Parent != null    | courant : null
+                supprimer non-racine    | Parent != null    | courant != null
+         */
+
+        if(courant != null) {
+            supprimerNoeud(parent, courant);
+        }
+    }
+
+    private void supprimerNoeud(Noeud<Clef, Def> parent, Noeud<Clef, Def> courant){
+        /*
+            si personne a droite,
+                remonte arbre a gauche
+            sinon si persone a gauche
+                remonte arbre droite
+            sinon
+                trouver precedent
+                remplacer courant <- precedent
+                supprimerNoeud(parentPrecedent, precedent)
+
+         */
+
+        Noeud<Clef, Def> precedent;
+        Noeud<Clef, Def> parentPrecedent;
+        if( courant.getGauche() == null){
+            if(parent != null){
+                if(parent.getDroite() == courant){
+                    parent.setDroite(courant.getDroite());
+                } else {
+                    parent.setGauche(courant.getDroite());
+                }
+            }else{
+                this.racine = courant.getDroite();
+            }
+        }else if (courant.getDroite() == null){
+            if(parent != null){
+                if(parent.getDroite() == courant){
+                    parent.setDroite(courant.getGauche());
+                } else {
+                    parent.setGauche(courant.getGauche());
+                }
+            } else {
+                this.racine = courant.getGauche();
+            }
+        } else {
+            precedent = courant.getGauche();
+            parentPrecedent = courant;
+            while( precedent.getDroite() != null){
+                parentPrecedent = precedent;
+                precedent = precedent.getDroite();
+            }
+            courant.setClef(precedent.getClef());
+            supprimerNoeud(parentPrecedent, precedent);
+        }
+
 
     }
 
-    private Clef minimum(Noeud<Clef> racine){
-        Noeud<Clef> courant = racine;
+    private Clef minimum(Noeud<Clef, Def> racine){
+        Noeud<Clef, Def> courant = racine;
         while(courant.getGauche() != null){
             courant = courant.getGauche();
         }
@@ -109,7 +189,7 @@ public class ArbreBinaire <Clef extends Comparable<Clef>> {
     }
 
     public boolean recherche(Clef clef){
-        Noeud<Clef> courant = racine;
+        Noeud<Clef, Def> courant = racine;
         /*
         while(courant != null && courant.getClef().compareTo(clef) != 0){
             if(courant.getClef().compareTo(clef) < 0){//dedoublement de code...

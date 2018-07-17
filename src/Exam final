@@ -1,0 +1,51 @@
+Fonction:
+    Function [apply]
+    Predicate [test]
+    Supplier [get]
+    Consumer [accept]
+
+LAMBDA
+
+GUI:
+    JFrame
+    JPanel
+    JTextField
+    JLabel
+    JButton
+
+    FLowLayout
+    GridLayout
+    BorderLayout
+    GridBagLayout
+        GridBagConstraint
+
+    setLayout
+    add
+
+    getText
+    setText
+
+    addActionListener(ActionListener)
+
+    setVisible
+
+Algorithmie:
+    Complexité
+
+    Fouille:
+        lineaire
+        logarithmique
+
+    Tri: (connaitre meilleur cas, pire cas, cas moyen)
+        selection
+        insertion
+        bulle
+        triRapide
+            Partition
+            Pivot
+
+    Arbre binaire de recherche
+        fouille         |
+        insertion       |O log(n) (cas moyen)
+        suppression     |O n      (pire cas)
+        parcour
